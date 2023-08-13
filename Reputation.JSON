@@ -1,0 +1,102 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "title": "Reputation Infrastructure Schema",
+    "description": "JSON Schema for the core reputation ledger for various sectors",
+    "type": "object",
+    "properties": {
+        "entityType": {
+            "type": "string",
+            "enum": ["buisness", "individual"]
+        },
+        "entityName": {
+            "type": "string"
+        },
+        "reputationScore" : {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+        },
+        "credentials" : {
+            "type": "object",
+            "properties": {
+                "completedBeneficeries": {
+                "type": "integer"
+            },
+
+            "certificate": {
+                "type": "object",
+                "properties": {
+                  "format": {
+                    "type": "string",
+                    "enum": ["pdf", "jpg"]
+                  },
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  }
+                },
+                "required": ["format", "url"],
+                "additionalProperties": false
+            },
+
+            "awards": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["pdf", "jpg"]
+                }
+            }
+            
+            
+                   
+        },
+        "ratings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "reviewer": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "comments": {
+                  "type": "string"
+                }
+              },
+              "required": ["reviewer", "rating"],
+              "additionalProperties": false
+            }
+        },
+
+        "reviews": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "reviewer": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "timestamp": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "required": ["reviewer", "text"],
+              "additionalProperties": false
+            }
+        },
+
+        
+
+
+    }
+        
+    }
+}
