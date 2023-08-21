@@ -6,71 +6,37 @@
     "properties": {
         "entityType": {
             "type": "string",
-            "enum": ["buisness", "individual"]
+            "enum": ["Provider", "Consumer", "Agent"]
         },
-        "entityName": {
+        "entityID": {
             "type": "string"
         },
-        "reputationScore" : {
-            "type": "number",
-            "minimum": 0,
-            "maximum": 100
+        "rating" : {
+          "type" : "object",
+          "properties": {
+            "totalRatingsScore": "number",
+            "totalRatingCount" : "integer"
+            
+          },
+            
         },
         "credentials" : {
-            "type": "object",
-            "properties": {
-                "completedBeneficeries": {
-                "type": "integer"
-            },
-
-            "certificate": {
-                "type": "object",
-                "properties": {
-                  "format": {
-                    "type": "string",
-                    "enum": ["pdf", "jpg"]
-                  },
-                  "url": {
-                    "type": "string",
-                    "format": "uri"
-                  }
-                },
-                "required": ["format", "url"],
-                "additionalProperties": false
-            },
-
-            "awards": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "enum": ["pdf", "jpg"]
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type" : "string",
+                  "format": "uri"
                 }
+                //Descriptor Object from Beckn 
+              }
             }
             
             
                    
         },
-        "ratings": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "reviewer": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "number",
-                  "minimum": 1,
-                  "maximum": 5
-                },
-                "comments": {
-                  "type": "string"
-                }
-              },
-              "required": ["reviewer", "rating"],
-              "additionalProperties": false
-            }
-        },
+        
 
         "reviews": {
             "type": "array",
