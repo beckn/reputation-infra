@@ -28,7 +28,7 @@ To tackle the above stated challenges and to have a fair and trustworthy Reputat
 - Enhanced UI and unique Rept. ID where the reputation will be stored according to the sectors.
 
 ## How it Works?
-
+![How it Works](assets/image.png)
 
 ## Getting Started 
 
