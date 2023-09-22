@@ -39,7 +39,7 @@ To get started with Reputation Infrastructre, follow the folowing steps:
 
 2. Install the required dependencies by running the command `npm install`.
 
-3. Can start the local server and the application by running `npm start`.
+3. Can start the local server and the application by running `npm run dev`.
 
 4. Hence, the project got set-up into your local machine and can contribute towards it.
 
@@ -58,7 +58,7 @@ We welcome contributions(bugs, new requested features and enhanced UIs) to the a
 
 3. Install the required dependencies by running the command `npm install`.
 
-4. Can start the local server and the application by running `npm start`.
+4. Can start the local server and the application by running `npm run dev`.
 
 5. Create the issue for the bug fix and the feature request with the tag in issues section of the repo, start working on it.
 
@@ -69,7 +69,3 @@ We welcome contributions(bugs, new requested features and enhanced UIs) to the a
 8. Push the commit to the forked repo by using: `git push origin new-branch`
 
 9. Create a Pull Request(PR) by mentionning the issue in it to the main repository.
-
-
-
-
